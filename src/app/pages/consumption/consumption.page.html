@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>استهلاكي</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="visable"> <img src="assets/icon/gif.gif" /></div> 
+
+
+    <ion-content>
+      <ion-item>
+        <ion-label>السنة</ion-label>
+        <ion-select ok-text="اختيار" cancel-text="خروج" (ionChange)="Change($event)" >
+          <ion-select-option *ngFor="let year of years" value="{{year}}">  
+            {{year}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+       <canvas  #barChart id="canvas" height="200px" width="180px"> {{bars}}</canvas>
+       
+  </ion-content>
+
+
+<app-footer> </app-footer>

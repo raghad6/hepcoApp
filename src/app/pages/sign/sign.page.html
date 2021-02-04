@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>انشاء حساب</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="Toppage"></div> 
+
+<h1> الرجاء ادخال البيانات التالية لانشاء حساب</h1>
+
+<ion-card class="card">
+  <br>
+  <ion-input placeholder="الاسم "[(ngModel)]="data.name"></ion-input>
+  <br>
+  <ion-input placeholder="رقم الهاتف" [(ngModel)]="data.phone"></ion-input>
+  <br>
+  <ion-input placeholder=" رقم الهوية" [(ngModel)]="data.idenity"></ion-input>
+  <br>
+  <ion-input placeholder=" رقم الخدمة" [(ngModel)]="data.id" ></ion-input>
+  <br>
+  <ion-input placeholder=" قيمة اخر فاتورة" [(ngModel)]="data.lastv" ></ion-input>
+  <br>
+  <ion-input placeholder=" كلمة مرور" [(ngModel)]="data.password"></ion-input>
+  <br>
+  <div> {{msg}} </div>
+  <ion-button expand="block" (click)="SignUp(data)">تسجيل</ion-button>
+  <br>
+  
+</ion-card>
+
+</ion-content>
+
+<app-footer> </app-footer>

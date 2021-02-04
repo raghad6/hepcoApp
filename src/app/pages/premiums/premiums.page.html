@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الاقساط</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="visable"> <img src="assets/icon/gif.gif" /></div> 
+
+<ion-content>
+
+  <table >
+    <tr>
+      <th>نوع الاضافة</th>
+      <th> تاريخ التفعيل</th>
+      <th>عدد الدفعات الكلية</th>
+      <th> المبلغ</th>
+      <th> عدد مرات الدفع</th>
+    </tr>
+
+    <tr  *ngFor="let d of data">
+      <td>{{d.FeeName}}</td>
+      <td>{{d.StartDate.date | date:'dd/MM/yy'}}</td>
+      <td>{{d.FeeTimes}}</td>
+      <td>{{d.FeeValue}}</td>
+      <td>{{d.CallTimes}}</td>
+    </tr>
+  </table>
+
+
+</ion-content>
+
+<app-footer> </app-footer>

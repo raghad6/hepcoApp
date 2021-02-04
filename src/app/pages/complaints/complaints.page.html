@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الشكاوي</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="page"> </div>
+
+  <ion-card>
+  <ion-list>
+    <ion-radio-group value="1" [(ngModel)]="data.cat" >
+
+        <p>اختر تصنيف الشكوى</p>
+      <ion-item>
+        <ion-label>عداد عاطل</ion-label>
+        <ion-radio slot="start" color="success" value="1"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>سقوط عامود كهرباء</ion-label>
+        <ion-radio slot="start" color="tertiary" value="2"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>سقوط عامود انارة</ion-label>
+        <ion-radio slot="start" color="danger" value="3"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>أسلاك كهرباء على الأؤض </ion-label>
+        <ion-radio slot="start" color="tertiary" value="4"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  </ion-card>
+
+  <br>
+  
+  <ion-card class="card">
+    <br>
+    <ion-input [(ngModel)]="data.title" placeholder=" الاسم الرباعي "></ion-input>
+    <br>
+    <ion-input [(ngModel)]="data.address"  placeholder=" العنوان "></ion-input>
+    <br>
+    <ion-input [(ngModel)]="data.phone"  placeholder="رقم الهاتف"></ion-input>
+    <br>
+    <ion-textarea [(ngModel)]="data.desc"  placeholder="شكاوي اخرى"></ion-textarea>
+  </ion-card>
+  <br>
+  
+  <ion-button expand="block" (click)="postData(data)" >ارسال</ion-button>
+  <ion-icon name="camera-outline" class="icon"></ion-icon>
+  <h2>أضف صورة</h2>
+
+
+</ion-content>
+
+<app-footer> </app-footer>
+

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الاعلانات</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="visable"> <img src="assets/icon/gif.gif" /></div> 
+
+<ion-content>
+<ion-list >
+  <ion-item *ngFor="let d of data" (click)="GoToPage(d)">
+    <img class="im" src="https://www.hepco.ps/mob/public/cdn/main?id={{d.id}}">
+    <ion-label>
+      <h1>{{d.title}}</h1>
+      <p>{{d.date}}</p>
+    </ion-label> 
+  </ion-item>
+</ion-list>
+
+
+<ion-infinite-scroll (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="تحميل المزيد">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>

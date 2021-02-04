@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>تسجيل الدخول</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+<div class="Toppage"></div> 
+
+<h1> الرجاء ادخال البيانات التالية لتسجيل الدخول</h1>
+
+<!-- <form [formGroup]="formlogin"> -->
+<ion-card class="card">
+  <br>
+  <ion-input placeholder="رقم الخدمة "  [(ngModel)]="data.id"></ion-input>
+  <br>
+  <ion-input placeholder="كلمة المرور"  [(ngModel)]="data.password"></ion-input>
+  <div> {{msg}} </div>
+  <br>
+  <ion-button expand="block" (click)="postData(data)" >دخول</ion-button>
+  <h5 (click)="GoToPage('./sign')"> انشاء حساب</h5>
+</ion-card>
+<!-- </form> -->
+</ion-content>
+
+<app-footer> </app-footer>

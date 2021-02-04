@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>عطل فني</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class="Toppage"></div>
+
+  <h1> أهلاً بك عزيزي المواطن في قسم الشكاوي و الاقتراحات</h1>
+
+  <ion-card class="card">
+
+     <ion-button (click)="GoToPage('./idea')"  expand="block"  color="light"> اقتراحات </ion-button>
+     <br>
+     <ion-button (click)="GoToPage('./complaints')" class="a"expand="block"  color="light"> شكاوي  </ion-button>
+  </ion-card>
+</ion-content>
+
+<app-footer> </app-footer>

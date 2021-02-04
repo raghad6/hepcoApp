@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الاعلانات</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <div class="page"></div>
+
+  <ion-card >
+      <br>
+        <ion-card-title>{{d.title}}</ion-card-title>
+      <ion-card-header >
+        <ion-center>
+          <img src="https://www.hepco.ps/mob/public/cdn/main?id={{d.id}}">
+        </ion-center>
+      <br>
+        {{d.date}}
+      </ion-card-header >
+      <ion-card-content >
+       {{d.desc}}
+      </ion-card-content>
+  </ion-card>
+
+
+  </ion-content>
+  
+
+
+<app-footer> </app-footer>

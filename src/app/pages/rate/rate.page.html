@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>التعرفة المعتمدة</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="visable"> <img src="assets/icon/gif.gif" /></div> 
+
+
+<ion-content>
+
+  <table >
+    <tr >
+      <th>التعرفة المعتمدة</th>
+      <th>سعر التعرفة المعتمدة</th>
+    </tr>
+
+    <tr *ngFor='let d of data'>
+      <td  > {{d.tariff}} </td>
+      <td>{{d.cost_of_tariff}}</td>
+    </tr>
+
+    
+  </table>
+
+</ion-content>
+
+<app-footer> </app-footer>

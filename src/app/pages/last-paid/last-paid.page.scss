@@ -1,0 +1,16 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #bad5ea5c;
+    text-align: right;
+    padding: 8px;
+    font-size: 19px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #bbc0c33d;
+  }
