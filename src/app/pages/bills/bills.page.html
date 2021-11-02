@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>فواتيري</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <div class="top-page"></div>
+  <h5 *ngIf="user"> <ion-icon name="person-outline"></ion-icon> {{user}} </h5>
+  
+
+  <ion-grid class="my-grid">
+    <ion-row>
+      <ion-col>
+
+          <ion-card class="news right" (click)="GoToPage('./last-bills')" >
+            <img src="assets/icon/99.svg" width="60" height="60" >
+            <h1>آخر الفواتير</h1>
+          </ion-card>  
+        
+      </ion-col>
+      <ion-col>
+       
+          <ion-card class="contact left"(click)="GoToPage('./last-paid')">   
+            <img src="assets/icon/88.svg"  width="60" height="60"> 
+            <h1> آخر الدفعات</h1>
+          </ion-card>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+          <ion-card class="right" *ngIf="type!='POST'" (click)="GoToPage('./premiums')">
+            <img src="assets/icon/77.svg" width="85" height="70"> 
+            <h1>الأقساط</h1>
+          </ion-card>
+          <ion-card class="right" *ngIf="type=='POST'" (click)="GoToPage('./debit')">
+            <img src="assets/icon/77.svg" width="85" height="70"> 
+            <h1>الذمم</h1>
+          </ion-card>
+      </ion-col>
+      <ion-col>
+        
+          <ion-card class="left" (click)="GoToPage('./my-counter')"> 
+            <img src="assets/icon/4.svg"  width="85" height="70">
+            <h1> تسجيل قراءة العداد </h1>
+          </ion-card>
+        
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+          <ion-card class="right"  (click)="GoToPage('./consumption')"> 
+            <img src="assets/icon/89.svg"   width="85" height="70">
+            <h1> استهلاكي  </h1>
+          </ion-card>
+        
+      </ion-col>
+      <ion-col>
+        
+          <ion-card class="left" (click)="GoToPage('./personal-info')" >
+            <img src="assets/icon/6.svg"  width="85" height="70">
+            <h1>بياناتي </h1>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col *ngIf="!status"  (click)="GoToPage('./log-in')" >
+          <ion-card class="in right right">
+            <img src="assets/icon/in.svg"  width="85" height="70">
+            <h1>تسجيل الدخول </h1>
+          </ion-card>  
+      </ion-col>
+
+      <ion-col *ngIf="status"  (click)="logOut()">
+          <ion-card class="in  right">   
+            <img src="assets/icon/out.svg" width="85" height="70"> 
+            <h1>تسجيل الخروج</h1>
+          </ion-card>
+      </ion-col>
+
+      <ion-col >
+        <ion-card class="out  left" (click)="GoToPage('./home')">   
+          <img src="assets/icon/ho.svg"  width="85" height="70"> 
+          <h1>الرئيسية</h1>
+        </ion-card>
+    </ion-col>
+
+    </ion-row>
+    
+  </ion-grid>
+
+
+
+</ion-content>
+
+<app-footer> </app-footer>

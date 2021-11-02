@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>المعلومات الشخصية</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="page"> </div>
+  <form [formGroup]="formlogin">
+  <ion-card class="card" >
+    <br>
+    <ion-input  value="{{data.name}}"></ion-input>
+    <br>
+    <ion-input  value="{{data.service_no}}"></ion-input>
+    <br>
+    <ion-input formControlName="phone" placeholder="رقم الهاتف" [(ngModel)]="data.phone"></ion-input>
+    <br>
+    <ion-input formControlName="address" placeholder=" العنوان " [(ngModel)]="data.address"></ion-input>
+    <br>
+    <ion-input formControlName="identity" placeholder="رقم الهوية"[(ngModel)]="data.identity"></ion-input>
+    <br>
+    <ion-button expand="block" (click)="postData(data)">ارسال</ion-button>
+    <br>
+    <br>
+  </ion-card>
+</form>
+</ion-content>
+
+<app-footer> </app-footer>
+

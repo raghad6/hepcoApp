@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>تفاصيل المحطة</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  
+  <ion-content  >
+    <div class="page"></div>
+    <ion-card >
+<br>
+        <ion-card-title>{{d.name}}</ion-card-title>
+
+      <ion-card-header >
+        <in-center>
+                  <img src="https://www.hepco.ps/mob/public/cdn/map?id={{d.image}}">
+        </in-center>
+      </ion-card-header >
+      
+      <ion-card-content >
+      <ion-list>
+        
+        <ion-item>
+          <ion-icon name="person-outline">  </ion-icon>  {{d.primary_person }} 
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="home-outline"></ion-icon>    {{d.address}}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="call-outline"></ion-icon>  {{d.phone}}
+       </ion-item>
+
+     <ion-item>
+      أوقات الدوام : <br>
+      من الساعة  {{d.start}} إلى {{d.end}}
+   </ion-item>
+
+       
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+  </ion-content>
+  
+
+
+<app-footer> </app-footer>

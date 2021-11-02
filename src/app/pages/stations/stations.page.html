@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>مراكز الشحن</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div *ngIf="visable"> <img src="assets/icon/gif.gif" /></div> 
+
+<ion-content >
+    <ion-list >
+      <ion-item *ngFor="let d of data" (click)="GoToPage(d)">
+        <img class="im" src="/assets/icon/looca.svg">
+        <ion-label>
+          <h1>{{d.name}}</h1>
+          <p>{{d.address}}</p>
+        </ion-label> 
+      </ion-item>
+    </ion-list>
+
+    
+</ion-content>
+
+<app-footer></app-footer>
+

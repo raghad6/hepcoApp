@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>الرئيسية</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  
+  <div class="top-page"></div>
+  <ion-grid class="my-grid">
+    <ion-row>
+      <ion-col>
+          <ion-card class="news right"(click)="GoToPage('./tabs/news')">
+            <img src="assets/icon/2.svg"   width="60" height="60" >
+            <h1>أخبار و اعلانات</h1>
+          </ion-card>  
+      </ion-col>
+      <ion-col>
+       
+          <ion-card class="contact left" (click)="GoToPage('./contact-us')" >   
+            <img src="assets/icon/1.svg" width="60" height="60"> 
+            <h1>تواصل معنا</h1>
+          </ion-card>
+       
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+       
+          <ion-card class="right" (click)="GoToPage('./stations')">
+            <img src="assets/icon/3.svg"   width="85" height="70">
+            <h1>مراكز الشحن</h1>
+          </ion-card>
+      
+      </ion-col>
+      <ion-col>
+        
+          <ion-card class="left" (click)="GoToPage('./my-counter')"> 
+            <img src="assets/icon/4.svg"  width="85" height="70">
+            <h1>قراءة العداد</h1>
+          </ion-card>
+        
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+          <ion-card class="right" (click)="GoToPage('./bills')" > 
+            <img src="assets/icon/5.svg"   width="85" height="70">
+            <h1>فواتيري</h1>
+          </ion-card>
+        
+      </ion-col>
+      <ion-col>
+        
+          <ion-card class="left" (click)="GoToPage('./tips')">
+            <img src="assets/icon/98.svg"  width="85" height="70">
+            <h1> شؤون الموظفين </h1>
+          </ion-card>
+        
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+          <ion-card class=" error right" (click)="GoToPage('./errors')"  >
+            <img src="assets/icon/7.svg" width="85" height="70">
+            <h1>تسجيل عطل فني</h1>
+          </ion-card>
+        
+      </ion-col>
+      <ion-col>
+          <ion-card class=" rate left"  (click)="GoToPage('./rate')" >
+            <img src="assets/icon/8.svg" width="85" height="70">
+            <h1> التعرفة المعتمدة</h1>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light" class="b">
+      <ion-icon md="caret-up" ios="chevron-forword-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light" (click)="OpenFacebook()">
+        <ion-icon name="logo-facebook" > </ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <a href="whatsapp://send?text=&phone=+:97222292820">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
+
+
+<app-footer> </app-footer>

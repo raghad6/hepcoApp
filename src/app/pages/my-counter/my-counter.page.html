@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>قراءة العداد</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="page"> </div>
+  <ion-card class="card" >
+
+    <form [formGroup]="formlogin">
+    <br>
+    <ion-input formControlName="name"  placeholder="الاسم"  ></ion-input>
+    <br>
+    <ion-input  formControlName="phone" placeholder="رقم الهاتف"></ion-input>
+    <br>
+    <ion-input formControlName="service_no" placeholder=" رقم الخدمة"></ion-input>
+    <br>
+    <ion-input   formControlName="meter_val" placeholder="قراءة العداد"></ion-input>
+    <br>
+    <ion-button (click)="postData(data)"  >ارسال</ion-button>
+    </form>
+    <br>
+  </ion-card>
+
+  <div [ngStyle]="{color:isflase}">{{result}}</div>
+  <ion-card class="id">
+      <ion-icon name="calculator-outline" (click)=" readingCal()"></ion-icon>  
+      <h1> احتساب ثمن الاستهلاك</h1> 
+      <ion-icon name="camera-outline" class="icon"></ion-icon>
+       <h2>أضف صورة</h2>
+    <div class="verticalLine"></div>
+  </ion-card>
+
+
+</ion-content>
+
+
+
+<app-footer> </app-footer>
